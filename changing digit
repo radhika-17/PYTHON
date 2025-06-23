@@ -1,0 +1,9 @@
+a=[223,79,566,7712,989,76726,467,7789]
+for i in a:
+    d=list(str(i))
+    if(int(d[1])!=9):
+      d[1]=int(d[1])+1
+    else:
+        d[1]=0
+    res=[int(i) for i in d] 
+    print(d)
