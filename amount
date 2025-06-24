@@ -1,0 +1,16 @@
+def divide_amount(amount):
+    denominations = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1]
+ print("\nBreakdown of ₹", amount, "in Indian currency:")
+for denom in denominations:
+        count = amount // denom
+        if count:
+            print(f"{denom} x {count}")
+            amount %= denom
+try:
+    rupees = int(input("Enter amount in rupees: ₹ "))
+    if rupees < 0:
+        print("Please enter a non-negative amount.")
+    else:
+        divide_amount(rupees)
+except ValueError:
+    print("Invalid input. Please enter a valid number.")
