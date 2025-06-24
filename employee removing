@@ -1,0 +1,19 @@
+names=["rad","mad","sad","bad","had","dad","cad","tad","and","mud"]
+memo=[0,1,1,2,1,2,1,1,2,2]
+salary=[1000,2000,3000,4500,2100,2300,4000,1500,1300,1100]
+data=list(zip(names,memo,salary))
+removed=[i for i in data if i[2]>4000]
+remaining=[i for i in data if i[2]<=4000]
+remaining.sort(key=lambda x:x[2],reverse= True)
+to_removed=[]
+for i in remaining:
+   if(i[1]>1):
+     to_removed.append(i)
+   if(len(to_removed)==3):
+       break
+res=removed+to_removed
+print("the result is follows")
+pos=0
+for i in res:
+  print("{}.{} is removed his salary is {} and memo is {}".format(pos,i[0],i[2],i[1]))
+pos=pos+1
