@@ -1,0 +1,5 @@
+a="education is power"
+a2=set(a)
+b=list("lightenergy")
+for i in "raj",a2&set(b):
+    print(i)
