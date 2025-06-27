@@ -1,0 +1,10 @@
+class Rec:
+    def set_dim(self,a,b):
+        self.a=a
+        self.b=b
+    def area(self):
+       return self.a*self.b
+r=Rec()
+r.set_dim(20,30)
+b=r.area()
+print(b)
