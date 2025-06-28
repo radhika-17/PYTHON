@@ -1,0 +1,13 @@
+h=int(input("enter num of hens"))
+l=int(input("enter num of legs"))
+flag = False
+for i in range(h):
+    j=h-i
+    if(j*2+i*4==l):
+        flag = True
+        break
+if(flag):
+    print(i,j)
+else:
+        print("no solutions")
+        
